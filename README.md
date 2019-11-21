@@ -1,3 +1,3 @@
-# Default
+# Garduino Web Application
 
-Default project to copy & paste.
+Integrated web application for IMS.
