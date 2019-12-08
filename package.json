@@ -2,7 +2,7 @@
   "name": "default",
   "version": "1.0.0",
   "description": "Default",
-  "main": "electrons.js",
+  "main": "electron.js",
   "devDependencies": {
     "@babel/core": "^7.5.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
