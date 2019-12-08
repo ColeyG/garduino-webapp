@@ -2,7 +2,7 @@
   "name": "default",
   "version": "1.0.0",
   "description": "Default",
-  "main": "index.js",
+  "main": "electrons.js",
   "devDependencies": {
     "@babel/core": "^7.5.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -27,7 +27,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "./node_modules/.bin/eslint *.js src/**.js --fix; webpack --mode production",
     "dev": "webpack --mode development",
-    "lint": "./node_modules/.bin/eslint *.js src/**.js --fix;"
+    "lint": "./node_modules/.bin/eslint *.js src/**.js --fix;",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -38,5 +39,8 @@
   "bugs": {
     "url": "https://github.com/ColeyG/default"
   },
-  "homepage": "https://github.com/ColeyG/default"
+  "homepage": "https://github.com/ColeyG/default",
+  "dependencies": {
+    "electron": "^7.1.3"
+  }
 }
