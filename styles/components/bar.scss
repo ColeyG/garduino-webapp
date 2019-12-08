@@ -1,0 +1,36 @@
+.primary-bar {
+  background-color: $green;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  h1 {
+    margin: 0 10px;
+  }
+  ul {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    -webkit-app-region: no-drag;
+    li a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: 0.2s;
+      &:hover {
+        background-color: $salmon;
+      }
+    }
+  }
+}
