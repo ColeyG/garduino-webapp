@@ -17,7 +17,7 @@
     height: 800px;
     margin-top: -150px;
     .primary-nav {
-      width: 380px;
+      min-width: 380px;
       height: 100%;
       @include white-card();
       margin-right: 45px;
@@ -76,7 +76,7 @@
           flex-direction: column;
           justify-content: space-between;
           .moisture {
-            width: 100%;
+            min-width: 400px;
             height: 180px;
             @include white-card();
           }
