@@ -10,6 +10,14 @@ $default-map: (
   @return map-get($map: $map, $key: $value);
 }
 
+@function randHSL() {
+  @return hsl(random(360), 50%, 50%);
+}
+
+@mixin test-element() {
+  background-color: rgba(randHSL(), 0.5);
+}
+
 @mixin button-normalize() {
   border: none;
   background-color: rgba(0, 0, 0, 0);
