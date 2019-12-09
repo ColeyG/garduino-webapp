@@ -1,4 +1,5 @@
 .main-page {
+  padding-bottom: 10px;
   .primary-head {
     width: 100%;
     height: 250px;
@@ -14,18 +15,83 @@
     padding: 0 100px;
     width: 100%;
     height: 800px;
-    @include test-element();
-    margin-top: -170px;
+    margin-top: -150px;
     .primary-nav {
       width: 380px;
       height: 100%;
-      @include test-element();
+      @include white-card();
       margin-right: 45px;
     }
     .primary-content {
       flex-grow: 1;
       height: 100%;
-      @include test-element();
+      .search {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 45px;
+        .search-bar {
+          width: 400px;
+          height: 100%;
+          background-color: white;
+          border-radius: 3000px;
+        }
+        .user-icon {
+          width: 100px;
+          height: 100px;
+          background-color: white;
+          border-radius: 50%;
+        }
+      }
+      .status-calendar-con {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 45px;
+        .status {
+          height: 100%;
+          margin-right: 45px;
+          @include white-card();
+          flex-grow: 1;
+        }
+        .calendar {
+          width: 400px;
+          height: 300px;
+          @include white-card();
+        }
+      }
+      .moisture-and-plants {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        justify-content: space-between;
+        .moisture-plant-select {
+          margin-right: 45px;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .moisture {
+            width: 100%;
+            height: 180px;
+            @include white-card();
+          }
+          .plant-select {
+            max-width: 400px;
+            height: 130px;
+            @include white-card();
+          }
+        }
+        .current-plant {
+          height: 350px;
+          width: 350px;
+          @include white-card();
+        }
+      }
     }
   }
 }
