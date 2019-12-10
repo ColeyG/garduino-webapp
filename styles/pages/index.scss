@@ -17,10 +17,43 @@
     height: 800px;
     margin-top: -150px;
     .primary-nav {
-      min-width: 380px;
+      min-width: 320px;
       height: 100%;
       @include white-card();
       margin-right: 45px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 0 20px;
+      .logo {
+        width: 240px;
+        margin-left: 10%;
+        margin-top: -30px;
+        margin-bottom: -50px;
+      }
+      ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0 40px;
+        li {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: row;
+          margin-bottom: 25px;
+          img {
+            width: 40px;
+          }
+          a {
+            color: grey;
+            margin-left: 20px;
+            text-decoration: none;
+          }
+        }
+      }
     }
     .primary-content {
       flex-grow: 1;
