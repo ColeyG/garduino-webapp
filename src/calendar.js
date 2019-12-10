@@ -9,10 +9,9 @@ const leadingZero = (number) => {
   return number;
 };
 
-const calendarize = (calendar) => {
+const calendarize = (calendar, numOfDays, higlightedDays) => {
   const body = calendar.querySelector('.cal-body');
-  const numOfDays = 31;
-  const offset = 2;
+  const offset = 5;
   for (let i = 0; i < offset; i++) {
     const day = document.createElement('p');
     day.className = 'number-day';
@@ -21,9 +20,12 @@ const calendarize = (calendar) => {
   for (let i = 0; i < numOfDays; i++) {
     const day = document.createElement('p');
     day.className = 'number-day';
+    if (higlightedDays.includes(i + 1)) {
+      day.className += ' highlight';
+    }
     day.append(document.createTextNode(leadingZero(i + 1)));
     body.appendChild(day);
   }
 };
 
-calendarize(calendarElement);
+calendarize(calendarElement, 30, [3, 13, 21]);
