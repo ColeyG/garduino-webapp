@@ -26,6 +26,8 @@ const calendarize = (calendar, numOfDays, higlightedDays) => {
     day.append(document.createTextNode(leadingZero(i + 1)));
     body.appendChild(day);
   }
+  calendar.querySelector('.cal-head').style.opacity = 1;
+  body.style.opacity = 1;
 };
 
 calendarize(calendarElement, 30, [3, 13, 21]);
