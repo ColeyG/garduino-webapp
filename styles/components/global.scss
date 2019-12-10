@@ -1,0 +1,13 @@
+body {
+  background-color: $green-white;
+  overflow: hidden;
+}
+.wrapper {
+  overflow-y: auto;
+  max-height: 98vh;
+}
+@mixin white-card() {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

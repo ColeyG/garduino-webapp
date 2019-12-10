@@ -1,0 +1,14 @@
+@import "./cold-lib.scss";
+
+$green: #4cb27c;
+$salmon: #ffa37c;
+$green-white: #e4fde1;
+$teal: #439a86;
+$navy: #2b2d42;
+$black: #16161d;
+
+@import "./components/fonts.scss";
+@import "./components/bar.scss";
+@import "./components/global.scss";
+
+@import "./pages/index.scss";

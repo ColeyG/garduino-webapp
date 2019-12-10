@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "montserrat";
+  src: url(./fonts/montserrat/Montserrat-Regular.otf);
+}
+
+@mixin montserrat($color: $black, $size: 16pt, $weight: normal) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: montserrat;
+}
+
+h1,
+h2,
+p,
+a,
+input {
+  @include montserrat();
+}
