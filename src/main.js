@@ -18,7 +18,6 @@ document.querySelector('.maximize-btn').addEventListener('click', (e) => {
   }
 });
 
-
 document.querySelector('.minimize-btn').addEventListener('click', (e) => {
   const window = remote.getCurrentWindow();
   window.minimize();
