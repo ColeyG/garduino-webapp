@@ -4,6 +4,8 @@ let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
+    width: 1000,
+    height: 800,
     minWidth: 600,
     minHeight: 500,
     x: 200,
