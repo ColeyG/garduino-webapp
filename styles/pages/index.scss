@@ -138,7 +138,29 @@
         .current-plant {
           height: 350px;
           width: 350px;
+          padding: 20px;
+          box-sizing: border-box;
           @include white-card();
+          background-image: url("../assets/icons/clementina-l.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 220px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-direction: column;
+          .head {
+            .title {
+              @include montserrat($color: $green, $weight: bold, $size: 16pt);
+              margin-bottom: 5px;
+            }
+          }
+          .foot {
+            width: 100%;
+            p {
+              text-align: right;
+            }
+          }
         }
       }
     }
