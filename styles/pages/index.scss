@@ -130,9 +130,24 @@
             @include white-card();
           }
           .plant-select {
-            max-width: 400px;
+            max-width: 500px;
             height: 130px;
             @include white-card();
+            padding: 10px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            .plant {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              p {
+                margin-top: 5px;
+                @include montserrat($color: $black, $weight: bold, $size: 8pt);
+              }
+            }
           }
         }
         .current-plant {
