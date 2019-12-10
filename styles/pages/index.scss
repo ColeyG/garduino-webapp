@@ -108,9 +108,44 @@
           flex-grow: 1;
         }
         .calendar {
+          box-sizing: border-box;
           width: 400px;
           height: 300px;
           @include white-card();
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .cal-head {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin-bottom: 5px;
+            .month-switch {
+              margin: 0 10px;
+            }
+          }
+          .cal-body {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .day-of-week {
+              margin-bottom: 5px;
+            }
+            .number-day {
+              margin: 5px 0;
+            }
+            p {
+              text-align: center;
+              flex-basis: 14%;
+              @include pt($color: $black, $size: 12pt);
+            }
+          }
         }
       }
       .moisture-and-plants {

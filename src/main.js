@@ -1,6 +1,7 @@
 import '../styles/reset.css';
 import '../styles/main.scss';
 import 'babel-polyfill';
+import './calendar';
 
 const { remote } = require('electron');
 

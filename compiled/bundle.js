@@ -3827,6 +3827,17 @@ eval("/**\n * Copyright (c) 2014, Facebook, Inc.\n * All rights reserved.\n *\n 
 
 /***/ }),
 
+/***/ "./src/calendar.js":
+/*!*************************!*\
+  !*** ./src/calendar.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var calendarElement = document.querySelector('.calendar');\n\nvar leadingZero = function leadingZero(number) {\n  number = \"\".concat(number);\n  console.log(number.length);\n\n  if (number.length === 1) {\n    return \"0\".concat(number);\n  }\n\n  return number;\n};\n\nvar calendarize = function calendarize(calendar) {\n  var body = calendar.querySelector('.cal-body');\n  var numOfDays = 31;\n  var offset = 2;\n\n  for (var i = 0; i < offset; i++) {\n    var day = document.createElement('p');\n    day.className = 'number-day';\n    body.appendChild(day);\n  }\n\n  for (var _i = 0; _i < numOfDays; _i++) {\n    var _day = document.createElement('p');\n\n    _day.className = 'number-day';\n\n    _day.append(document.createTextNode(leadingZero(_i + 1)));\n\n    body.appendChild(_day);\n  }\n};\n\ncalendarize(calendarElement);\n\n//# sourceURL=webpack:///./src/calendar.js?");
+
+/***/ }),
+
 /***/ "./src/main.js":
 /*!*********************!*\
   !*** ./src/main.js ***!
@@ -3835,7 +3846,7 @@ eval("/**\n * Copyright (c) 2014, Facebook, Inc.\n * All rights reserved.\n *\n 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/reset.css */ \"./styles/reset.css\");\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_reset_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/main.scss */ \"./styles/main.scss\");\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_main_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var babel_polyfill__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! babel-polyfill */ \"./node_modules/babel-polyfill/lib/index.js\");\n/* harmony import */ var babel_polyfill__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(babel_polyfill__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nvar _require = __webpack_require__(/*! electron */ \"electron\"),\n    remote = _require.remote;\n\ndocument.querySelector('.close-btn').addEventListener('click', function (e) {\n  var window = remote.getCurrentWindow();\n  window.close();\n});\ndocument.querySelector('.maximize-btn').addEventListener('click', function (e) {\n  var window = remote.getCurrentWindow();\n\n  if (window.isMaximized()) {\n    window.unmaximize();\n  } else {\n    window.maximize();\n  }\n});\ndocument.querySelector('.minimize-btn').addEventListener('click', function (e) {\n  var window = remote.getCurrentWindow();\n  window.minimize();\n});\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/reset.css */ \"./styles/reset.css\");\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_reset_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/main.scss */ \"./styles/main.scss\");\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_main_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var babel_polyfill__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! babel-polyfill */ \"./node_modules/babel-polyfill/lib/index.js\");\n/* harmony import */ var babel_polyfill__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(babel_polyfill__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _calendar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./calendar */ \"./src/calendar.js\");\n/* harmony import */ var _calendar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_calendar__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\nvar _require = __webpack_require__(/*! electron */ \"electron\"),\n    remote = _require.remote;\n\ndocument.querySelector('.close-btn').addEventListener('click', function (e) {\n  var window = remote.getCurrentWindow();\n  window.close();\n});\ndocument.querySelector('.maximize-btn').addEventListener('click', function (e) {\n  var window = remote.getCurrentWindow();\n\n  if (window.isMaximized()) {\n    window.unmaximize();\n  } else {\n    window.maximize();\n  }\n});\ndocument.querySelector('.minimize-btn').addEventListener('click', function (e) {\n  var window = remote.getCurrentWindow();\n  window.minimize();\n});\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ }),
 

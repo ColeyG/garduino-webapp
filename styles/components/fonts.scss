@@ -3,11 +3,23 @@
   src: url(./fonts/montserrat/Montserrat-Regular.otf);
 }
 
+@font-face {
+  font-family: "pt";
+  src: url(./fonts/pt-mono.ttf);
+}
+
 @mixin montserrat($color: $black, $size: 16pt, $weight: normal) {
   color: $color;
   font-size: $size;
   font-weight: $weight;
   font-family: montserrat;
+}
+
+@mixin pt($color: $black, $size: 16pt, $weight: normal) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: pt;
 }
 
 h1,
