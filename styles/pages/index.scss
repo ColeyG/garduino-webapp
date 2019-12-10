@@ -37,12 +37,28 @@
           height: 100%;
           background-color: white;
           border-radius: 3000px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row;
+          padding: 0 20px;
+          img {
+            width: 30px;
+          }
+          input {
+            flex-grow: 1;
+            height: 80%;
+            font-size: 16pt;
+            border: none;
+          }
         }
         .user-icon {
           width: 100px;
           height: 100px;
           background-color: white;
           border-radius: 50%;
+          background-image: url("../assets/icons/profile-pic.png");
+          background-size: cover;
         }
       }
       .status-calendar-con {
