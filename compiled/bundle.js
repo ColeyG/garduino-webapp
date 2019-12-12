@@ -3846,7 +3846,7 @@ eval("var calendarElement = document.querySelector('.calendar');\n\nvar leadingZ
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/reset.css */ \"./styles/reset.css\");\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_reset_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/main.scss */ \"./styles/main.scss\");\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_main_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var babel_polyfill__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! babel-polyfill */ \"./node_modules/babel-polyfill/lib/index.js\");\n/* harmony import */ var babel_polyfill__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(babel_polyfill__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _calendar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./calendar */ \"./src/calendar.js\");\n/* harmony import */ var _calendar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_calendar__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\nvar _require = __webpack_require__(/*! electron */ \"electron\"),\n    remote = _require.remote;\n\ndocument.querySelector('.close-btn').addEventListener('click', function (e) {\n  var window = remote.getCurrentWindow();\n  window.close();\n});\ndocument.querySelector('.maximize-btn').addEventListener('click', function (e) {\n  var window = remote.getCurrentWindow();\n\n  if (window.isMaximized()) {\n    window.unmaximize();\n  } else {\n    window.maximize();\n  }\n});\ndocument.querySelector('.minimize-btn').addEventListener('click', function (e) {\n  var window = remote.getCurrentWindow();\n  window.minimize();\n});\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/reset.css */ \"./styles/reset.css\");\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_reset_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/main.scss */ \"./styles/main.scss\");\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_main_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var babel_polyfill__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! babel-polyfill */ \"./node_modules/babel-polyfill/lib/index.js\");\n/* harmony import */ var babel_polyfill__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(babel_polyfill__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _calendar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./calendar */ \"./src/calendar.js\");\n/* harmony import */ var _calendar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_calendar__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\nvar _require = __webpack_require__(/*! child_process */ \"child_process\"),\n    exec = _require.exec;\n\nvar _require2 = __webpack_require__(/*! electron */ \"electron\"),\n    remote = _require2.remote;\n\ndocument.querySelector('.close-btn').addEventListener('click', function (e) {\n  var window = remote.getCurrentWindow();\n  window.close();\n});\ndocument.querySelector('.maximize-btn').addEventListener('click', function (e) {\n  var window = remote.getCurrentWindow();\n\n  if (window.isMaximized()) {\n    window.unmaximize();\n  } else {\n    window.maximize();\n  }\n});\ndocument.querySelector('.minimize-btn').addEventListener('click', function (e) {\n  var window = remote.getCurrentWindow();\n  window.minimize();\n});\nvar child = exec('node arduino.js', function (error, stdout, stderr) {\n  console.log(\"stdout: \".concat(stdout));\n  console.log(\"stderr: \".concat(stderr));\n\n  if (error !== null) {\n    console.log(\"exec error: \".concat(error));\n  }\n});\nchild.stdout.on('data', function (data) {\n  console.log(data.toString());\n});\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ }),
 
@@ -3869,6 +3869,17 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./styl
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./styles/reset.css?");
+
+/***/ }),
+
+/***/ "child_process":
+/*!********************************!*\
+  !*** external "child_process" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"child_process\");\n\n//# sourceURL=webpack:///external_%22child_process%22?");
 
 /***/ }),
 
