@@ -2,7 +2,6 @@ const calendarElement = document.querySelector('.calendar');
 
 const leadingZero = (number) => {
   number = `${number}`;
-  console.log(number.length);
   if (number.length === 1) {
     return `0${number}`;
   }
