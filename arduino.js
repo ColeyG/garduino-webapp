@@ -22,15 +22,15 @@ board.on('ready', () => {
   });
 
   function changeTemp() {
-    console.log(this.value);
+    console.log(`temp:${this.value}`);
   }
 
   function changeLight() {
-    console.log(this.value);
+    console.log(`light:${this.value}`);
   }
 
   function changeMoisture() {
-    console.log(this.value);
+    console.log(`moisture:${this.value}`);
   }
 
   temp.on('data', changeTemp);
