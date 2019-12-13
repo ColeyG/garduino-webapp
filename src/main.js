@@ -21,15 +21,16 @@ const myLineChart = new Chart(lineChart, {
   data: {
     datasets: [{
       data: [{
-        x: 10,
+        x: 0,
         y: 0,
       }, {
-        x: 25,
+        x: 5,
         y: 5,
       }, {
-        x: 20,
-        y: 10,
-      }],
+        x: 10,
+        y: 5,
+      },
+      ],
       backgroundColor: [
         'rgb(255, 205, 86)',
         'rgb(255, 205, 86)',
