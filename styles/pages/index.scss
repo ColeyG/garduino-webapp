@@ -102,10 +102,22 @@
         align-items: center;
         margin-bottom: 45px;
         .status {
+          box-sizing: border-box;
           height: 100%;
           margin-right: 45px;
           @include white-card();
           flex-grow: 1;
+          padding: 20px;
+          h2 {
+            height: 5%;
+          }
+          .statuses {
+            height: 90%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+          }
         }
         .calendar {
           box-sizing: border-box;
@@ -171,9 +183,11 @@
           flex-direction: column;
           justify-content: space-between;
           .moisture {
+            box-sizing: border-box;
             min-width: 400px;
             height: 180px;
             @include white-card();
+            padding: 10px;
           }
           .plant-select {
             max-width: 500px;
@@ -226,4 +240,17 @@
       }
     }
   }
+}
+.chartjs-wrapper {
+  margin: 0 auto;
+  width: 12vw;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.line-chart {
+  height: 50px;
 }
